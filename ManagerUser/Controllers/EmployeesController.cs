@@ -26,7 +26,7 @@ namespace ManagerUser.Controllers
         }
 
         // GET: Employees/Details/5
-        public async Task<IActionResult> Details(int? id)
+        /*public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -41,12 +41,16 @@ namespace ManagerUser.Controllers
             }
 
             return View(employee);
-        }
+        }*/
 
         // GET: Employees/Create
-        public IActionResult Create()
+        public IActionResult AddOrEdit(int id=0)
         {
-            return View();
+            if(id == 0)
+             return View(new Employee());
+            else
+             return View(_context.Employees.Find(id)); 
+
         }
 
         // POST: Employees/Create
@@ -54,11 +58,14 @@ namespace ManagerUser.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Code,Position,OfficeLocation")] Employee employee)
+        public async Task<IActionResult> AddOrEdit([Bind("Id,Name,Code,Position,OfficeLocation")] Employee employee)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
+                if(employee.Id == 0)
+                    _context.Add(employee);
+                else
+                    _context.Update(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -66,7 +73,7 @@ namespace ManagerUser.Controllers
         }
 
         // GET: Employees/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        /*public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -79,12 +86,12 @@ namespace ManagerUser.Controllers
                 return NotFound();
             }
             return View(employee);
-        }
+        }*/
 
         // POST: Employees/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Code,Position,OfficeLocation")] Employee employee)
         {
@@ -114,30 +121,10 @@ namespace ManagerUser.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);
-        }
+        }*/
 
         // GET: Employees/Delete/5
         public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-
-            return View(employee);
-        }
-
-        // POST: Employees/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
             _context.Employees.Remove(employee);
@@ -145,9 +132,11 @@ namespace ManagerUser.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool EmployeeExists(int id)
+        // POST: Employees/Delete/5
+
+      /*private bool EmployeeExists(int id)
         {
             return _context.Employees.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

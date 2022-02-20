@@ -17,17 +17,21 @@ namespace ManagerUser.Models
 
         [Column(TypeName = "nvarchar(50)")]
         [DisplayName("Matricula")]
-        public int Code { get; set; }
+        public string Code { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
         [DisplayName("Cargo")]
-        public int Position { get; set; }
+        public String Position { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
         [DisplayName("Localização")]
-        public int OfficeLocation { get; set; }
+        public string OfficeLocation { get; set; }
 
-        public Employee(int id, string name, int code, int position, int officeLocation)
+        public Employee()
+        {
+
+        }
+        public Employee(int id, string name, string code, string position, string officeLocation)
         {
             Id = id;
             Name = name;

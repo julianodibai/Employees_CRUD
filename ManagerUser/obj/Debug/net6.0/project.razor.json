@@ -16298,11 +16298,6 @@
   "RootNamespace": "ManagerUser",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\Create.cshtml",
-      "TargetPath": "Views\\Employees\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -16313,13 +16308,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\AddOrEdit.cshtml",
+      "TargetPath": "Views\\Employees\\AddOrEdit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\Delete.cshtml",
-      "TargetPath": "Views\\Employees\\Delete.cshtml",
+      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16333,11 +16328,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\Details.cshtml",
-      "TargetPath": "Views\\Employees\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -16345,11 +16335,6 @@
     {
       "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\Index.cshtml",
       "TargetPath": "Views\\Employees\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\juliano\\OneDrive\\Área de Trabalho\\Nova pasta\\ManagerUser\\ManagerUser\\Views\\Employees\\Edit.cshtml",
-      "TargetPath": "Views\\Employees\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
